@@ -31,7 +31,7 @@ namespace ClientProject.View
         public Sign_In()
         {
             this.InitializeComponent();
-            ((Storyboard)Resources["GradientAnimation"]).Begin();
+         
         }
 
         private async void Button_submit(object sender, RoutedEventArgs e)
@@ -111,11 +111,11 @@ namespace ClientProject.View
                 rootFrame.Navigate(typeof(MainPage));
 
 
-                Debug.WriteLine("Da dang nhap thanh cong");
+                Debug.WriteLine("Đã đăng nhập thành công");
             }
             else
             {
-                Debug.WriteLine("File doesn't exist");
+                Debug.WriteLine("Vui lòng đăng nhập lại");
             }
         }
 

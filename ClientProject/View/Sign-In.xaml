@@ -18,7 +18,7 @@
         </Grid.Background>
 
         <StackPanel VerticalAlignment="Center" Margin="10,0">
-            <TextBlock Text="Đăng nhập" Foreground="White" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="Đăng nhập"  FontSize="30" FontWeight="Bold" HorizontalAlignment="Center"/>
 
             <Border Width="250" Margin="0,40,0,0" CornerRadius="15" BorderThickness="{StaticResource TextControlBorderThemeThickness}" Background="{StaticResource TextBoxBackgroundThemeBrush}" BorderBrush="{StaticResource TextBoxBorderThemeBrush}" >
                 <TextBox PlaceholderText="Email" x:Name="Email"   BorderBrush="Transparent" Background="Transparent"/>
@@ -28,13 +28,7 @@
                 <PasswordBox PlaceholderText="Password" x:Name="Password" Width="250" BorderBrush="Transparent" Background="Transparent"/>
             </Border>
             <TextBlock Foreground="Red" x:Name="password"/>
-            <Button Margin="0,20,0,0" Background="White" Foreground="Black
-                    " Content="Đăng nhập" HorizontalAlignment="Center"  Click="Button_submit"/>
-            <StackPanel HorizontalAlignment="Center" Margin="0,30,0,0">
-                <TextBlock Foreground="White" Text="Bạn chưa có tài khoản? "></TextBlock>
-                <HyperlinkButton HorizontalAlignment="Center" Foreground="WhiteSmoke" Content="Đăng ký ngay" ></HyperlinkButton>
-            </StackPanel>
-
+            <Button Margin="0,20,0,0" Background="White" Foreground="Black" Content="Login" HorizontalAlignment="Center" FontSize="20" Click="Button_submit"/>
 
         </StackPanel>
 
