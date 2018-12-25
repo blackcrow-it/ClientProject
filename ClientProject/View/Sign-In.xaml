@@ -7,11 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        
     <StackPanel Margin="20">
         <StackPanel.Background>
             <ImageBrush/>
         </StackPanel.Background>
+        <Button Grid.Column="1" Content="Log Out" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Do_Logout"/>
         <PersonPicture
             DisplayName=""
             Initials=""
@@ -19,6 +20,7 @@
             Opacity="0.5"
             Margin="10"/>
         <TextBlock Text="Sign in with your music account" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      
         <Grid Margin="100,8,100,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.5*"></RowDefinition>
@@ -33,7 +35,7 @@
             <PasswordBox x:Name="Password" PlaceholderText="Password" BorderBrush="MediumSeaGreen" BorderThickness="0,0,0,1.5" Grid.Row="1"/>
             <CheckBox Content="Remember Me" Grid.Row="2" Margin="2"/>
             <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="AliceBlue" Background="MediumSeaGreen" Width="324" Grid.Row="3" Click="Button_submit" Margin="0,0,0,0" />
-     
+            
         </Grid>
     </StackPanel>
 </Page>

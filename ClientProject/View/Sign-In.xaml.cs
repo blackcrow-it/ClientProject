@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection.Metadata;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -31,17 +32,6 @@ namespace ClientProject.View
         public Sign_In()
         {
             this.InitializeComponent();
-        }
-
-        public async void Button_Logout()
-        {
-            StorageFolder folder = ApplicationData.Current.LocalFolder;
-            if (await folder.TryGetItemAsync("token.txt") != null)
-            {
-                StorageFile file = await folder.GetFileAsync("token.txt");
-                await file.DeleteAsync();
-                Debug.WriteLine("you logouted !!!");
-            }
         }
 
         private async void Button_submit(object sender, RoutedEventArgs e)
@@ -85,7 +75,21 @@ namespace ClientProject.View
                 }
             }
         }
-
+       
+        public async void Do_Logout(object sender, RoutedEventArgs e)
+        {
+            StorageFolder folder = ApplicationData.Current.LocalFolder;
+            if (await folder.TryGetItemAsync("token.txt") != null)
+            {
+                StorageFile file = await folder.GetFileAsync("token.txt");
+                await file.DeleteAsync();
+                Debug.WriteLine("you logouted !!!");
+            }
+            else
+            {
+                Debug.WriteLine("Error Logout");
+            }
+        }
         public static async void DoLogin()
         {
             // Auto login nếu tồn tại file token 
