@@ -31,7 +31,17 @@ namespace ClientProject.View
         public Sign_In()
         {
             this.InitializeComponent();
-         
+        }
+
+        public async void Button_Logout()
+        {
+            StorageFolder folder = ApplicationData.Current.LocalFolder;
+            if (await folder.TryGetItemAsync("token.txt") != null)
+            {
+                StorageFile file = await folder.GetFileAsync("token.txt");
+                await file.DeleteAsync();
+                Debug.WriteLine("you logouted !!!");
+            }
         }
 
         private async void Button_submit(object sender, RoutedEventArgs e)
